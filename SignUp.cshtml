@@ -1,0 +1,27 @@
+﻿@model validation.Models.SignUp
+
+<h1>SignUp</h1>
+@Html.ValidationSummary()
+<form action="" method="post">
+    Name : <input type="text" value="@(Model==null ? "":Model.Name)" name="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <br />
+
+    UserId : <input type="text" value="@(Model==null ? "":Model.UserId)" name="UserId" /><br />
+    <span class="text-danger">@Html.ValidationMessage("UserId")</span>
+    <br />
+
+    Password : <input type="text" value="@(Model==null ? "":Model.Password)" name="Password" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span>
+    <br />
+
+    Id : <input type="text" value="@(Model==null ? "":Model.Id)" name="Id" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Id")</span>
+    <br />
+
+    Email : <input type="text" value="@(Model==null ? "":Model.Email)" name="Email" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+    <br />
+
+    <input type="submit" value="Sign Up" />
+</form>
